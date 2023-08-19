@@ -2,6 +2,8 @@
 <button [disabled]="btnDisabled">Enviar</button>
 <input type="text " [placeholder]="person.name" />
 <button (click)="toogleButton()">Toogle Button</button>
+<p>Edad : {{ age }}</p>
+<button (click)="increaseAge()">Age ++</button>
 
 <progress max="100" [value]="age"></progress>
 
@@ -9,3 +11,9 @@
 <h2>{{ "Hola mundo ".repeat(5) }}</h2>
 <p>3 + 3 = {{ 3 + 3 }}</p>
 <h3>Hola soy {{ title }} y tengo {{ age }} años</h3>
+
+<p>---------------------------------------</p>
+<h1>Ng model y data binding</h1>
+<p>Nombre {{ person.name }}</p>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name" />
+<p>Valido ? {{ nameInput.valid }}</p>

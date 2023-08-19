@@ -19,4 +19,8 @@ export class AppComponent {
     this.btnDisabled = !this.btnDisabled;
   }
 
+  increaseAge() {
+    this.age += 1;
+  }
+
 }
